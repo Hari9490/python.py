@@ -3,11 +3,11 @@ pipeline {
     stages {
         stage('helloworld') {
             when {
-                branch 'hello'
+                branch 'simplecalci'
             }
             steps {
                 sh "pip install -r requirements.txt"
-                sh 'python3 app.py'
+                sh 'python3 hello.py'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
             }
         }
