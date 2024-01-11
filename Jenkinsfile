@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('helloworld') {
             when {
-                branch 'main'
+                branch 'hello'
             }
             steps {
                 sh "pip install -r requirements.txt"
@@ -13,7 +13,7 @@ pipeline {
         }
         stage('calculator') {
             when {
-                branch 'simplecalci'
+                branch 'main'
             }
             steps {
                 sh "pip install -r requirements.txt"
